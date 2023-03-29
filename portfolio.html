@@ -1,306 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>Document</title>
-</head>
-<style>
-    *{
-        box-sizing: border-box;
-    }
-    body{
-        background: rgb(36, 44, 64);
-        box-sizing: border-box;
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dave | Portfolio Website</title>
 
-    }
-    svg{
-        width: 12%;
-        fill: rgb(235, 38, 77);
-    }
-    .header ul{
-        list-style-type: none;
-    }
-    .header li a {
-        text-decoration: none;
-        color: rgb(209, 205, 205);
-        font-family: sans-serif;
-        font-weight: bold;
-        transition: 0.4s ease-in-out;
-    }
-    .header li a:hover{
-        color: rgb(235, 38, 77);
-    }
-    /* .header{
-        width: 300px;
-        float: left;
-        height: 70px;
-    } */
-    ul{
-        /* float: left; */
-        display: flex;
-        /* justify-content: center;
-        align-items: center; */
-        position: relative;
-        left: 400px;
-    }
-    .header ul::after{
-        clear: both;
-        display: block;
-        content: " ";
-    }
-    ul li {
-        margin-left: 60px;
-        margin-top: 30px;
-        margin-bottom: 50px
-        
-    }
-    
-    /* .img-jpg {
-        position: relative;
-        bottom: 100px;
-    } */
-    .h-art{
-        color: white;
-        font-family: serif;
-    }
-    .xx-art{
-        color: rgb(112, 110, 110);
-        font-family: serif;
-        /* position: relative;
-        bottom : 330px; */
-    }
-    .article{
-        display: flex;
-        flex-direction: row 2rem;
-        margin-bottom: 150px;
-    }
-    .article img{
-        float: right;
-    }
-    .sub-btn{
-        margin: 15px 5px;
-        padding: 15px 10px;
-        border: none;
-        text-decoration: none;
-        font-family: "lato", sans-serif;
-        font-weight: 600;
-        font-size: 15px;
-        color: white;
-        background:rgb(235, 38, 77);
-    }
-    .services hr{
-        border: none;
-        height: 3px;
-        width: 6%;
-        background-color: rgb(40, 182, 222);
-        text-align: left;
-        margin-left: 0;
-        margin-top: 0;
-    }
-    .C-cards{
-        display: grid;
-        grid-template-columns: auto auto auto ;
-        grid-gap: 20px 10px;
-        margin: 100px;
-    }
-    .cards{
-        background: rgb(56, 64, 84);
-        border-radius: 10px;
-        margin: 10px;
-        /* box-shadow: rgb(91, 97, 115) 2px 2px 2px 2px ; */
-        /* border: solid rgb(26, 34, 54) 2px; */
-    }
-    .Boxes svg{
-      direction: bottom ;
-    }
-    @media screen (max-width:600px){
-        .C-cards {
-            display: none;
+        <!-- external css -->
+        <link rel="stylesheet" href="./css/Styles.css">
 
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="./Assets/Bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
-        }
-    }
-    /* [class*="box-"] {
-        display: block;
-    }
+    </head>
 
-    [class*="box-"]::before {
-        content: '';
-        display: block;
-        width: 1em;
-        height: 1em;
+    <body> 
 
-        background-repeat: no-repeat;
-        background-size: contain;
-        -webkit-background-size: contain;
-    }
-    .box-git{
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3C!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/%3E%3C/svg%3E");
-    }
-    */
-    .sub-btns {
-        margin: 15px 5px;
-        padding: 15px 10px;
-        border: none;
-        text-decoration: none;
-        font-family: "lato", sans-serif;
-        font-weight: 600;
-        font-size: 15px;
-        color: white;
-        background:rgb(235, 38, 77);
-        width: 200px;
-    }
-    .sub-btns svg{
-        fill: white;
-        width: 8%;
-    }
-   
-   .about{
-    display: flex;
-    flex-direction: row 2rem;
-   }
-   .contact{
-    background: url(../28-removebg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    justify-content: center;
-    text-align: center;
-   }
+        <!-- navbar -->
 
-</style>
-<body>
-    <div class="header">
-        <ul>
-            <li><a href="" class="lol">Home</a></li>
-            <li><a href="">Services/Skills</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-    </div>
-    
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#">David <span>Kue</span></a>
 
-    <div class="article" style="margin-left: 50px;">
-        <div class="art-icle">
-            <h1 class="h-art">Hello, I'm <br> David Kue I'm a front end Developer.</h1>
-
-            <p  class="xx-art">Fond of creating web applications designs and bringing and <br> bringing them to life using code & develop mobile design.</p>
-            <button class="sub-btn">My Portfolio</button>
-        </div>
-        
-        <div class="img-jpg">
-        <img src="../coding.jpg" alt="piczzs" width="600vw" height="300px">
-        </div>
-
-        
-    </div>
-    <div class="s-skill" style="position: relative; right: 40px;" data-aos="fade-left">
-            
-        <div class="services" style="margin-left: 120px;">
-            <p style="color: white; font-weight: bold;">services</p>
-            <h2 style="color: rgb(235, 38, 77); margin-bottom: 0;">Skill-Set</h2>
-            <hr>
-        </div>
-
-        <div class="C-cards" >
-            <div class="cards">      
-                <div class="Boxes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                </div>
-                <h1>Gift Version Control</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate nemo, molestiae iure dolorum at aut nihil est voluptatem velit alias provident molestias. Consectetur quia numquam dolor aspernatur, voluptatibus suscipit nostrum placeat beatae sit perspiciatis veritatis. 
-                </p>
-            </div>
-        
-            <div class="cards">
-                <div class="Boxes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zm80 432h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
-                </div>
-                <h1>Responsive Design</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam at tenetur accusamus maxime distinctio, nulla dignissimos non quasi cum nobis atque totam animi quia. Consequatur quia .</p>
-            </div>
-        
-            <div class="cards">
-                <div class="Boxes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
-                </div>
-                <h1>Front-end Development</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ab fugit architecto, quasi tempora, tenetur eos maiores excepturi consectetur eaque veritatis odio aperiam, ipsum sit .</p>
-            </div>
-            
-            <div class="cards">       
-                <div class="Boxes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 96V320H64L64 96H384zM64 32C28.7 32 0 60.7 0 96V320c0 35.3 28.7 64 64 64H181.3l-10.7 32H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H277.3l-10.7-32H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm464 0c-26.5 0-48 21.5-48 48V432c0 26.5 21.5 48 48 48h64c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48H528zm16 64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16s7.2-16 16-16zm-16 80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H544c-8.8 0-16-7.2-16-16zm32 160a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
-                </div>
-                <h1>Web Development</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, quae atque et quo quia culpa aut doloribus est temporibus id odio, excepturi unde enim maxime ullam inventore amet ex, expedita !</p>
-            </div>
-        
-        
-            <div class="cards">   
-                <div class="Boxes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M305.8 2.1C314.4 5.9 320 14.5 320 24V64h16c70.7 0 128 57.3 128 128V358.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V192c0-35.3-28.7-64-64-64H320v40c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1zM104 80c0-13.3-10.7-24-24-24S56 66.7 56 80s10.7 24 24 24s24-10.7 24-24zm8 73.3V358.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V153.3C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80c0 32.8-19.7 61-48 73.3zM104 432c0-13.3-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24zm328 24c13.3 0 24-10.7 24-24s-10.7-24-24-24s-24 10.7-24 24s10.7 24 24 24z"/></svg>
-        
-                </div>
-                <h1>Freelancing</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente accusamus odio doloremque quaerat veniam architecto assumenda vero consequatur perferendis repellendus culpa, impedit facere ?</p>
-            </div>
-        
-        
-            <div class="cards">      
-                <div class="Boxes">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 0c53 0 96 43 96 96v3.6c0 15.7-12.7 28.4-28.4 28.4H188.4c-15.7 0-28.4-12.7-28.4-28.4V96c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7 .7 1.3 1.4 1.9 2.1c14.2-7.3 30.4-11.4 47.5-11.4H312c17.1 0 33.2 4.1 47.5 11.4c.6-.7 1.2-1.4 1.9-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7 .7-1.4 1.3-2.1 1.9c6.2 12 10.1 25.3 11.1 39.5H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H416c0 24.6-5.5 47.8-15.4 68.6c2.2 1.3 4.2 2.9 6 4.8l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-63.1-63.1c-24.5 21.8-55.8 36.2-90.3 39.6V240c0-8.8-7.2-16-16-16s-16 7.2-16 16V479.2c-34.5-3.4-65.8-17.8-90.3-39.6L86.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c1.9-1.9 3.9-3.4 6-4.8C101.5 367.8 96 344.6 96 320H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H96.3c1.1-14.1 5-27.5 11.1-39.5c-.7-.6-1.4-1.2-2.1-1.9l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"/></svg>
-                </div>
-                <h1>Debugging</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius soluta fuga, nemo sunt laborum dignissimos dolores facere ut voluptatibus fugiat odio fugit voluptates inventore neque officiis .</p>
-            </div>
-        </div>
-    </div>
-        
-    <div class="about" data-aos="fade-left">
-
-        <div class="img-abt" style="margin-left: 50px;" >
-            <img src="../work22.png" alt="work-art">
-        
-        </div>
-      
-        <div class="abb-abt" style="margin-left: 80px; margin-bottom: 40px;">
-            <h3 style="color: white;">About me </h3>
-            <h1 style="color: rgb(245, 48, 87); font-weight: lighter; font-family: sans-serif;">
-                Hi There
-            
-            </h1>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est impedit voluptatibus vel soluta nostrum fugit esse accusantium, provident laudantium nisi dolores alias voluptatem architecto debitis illo possimus tempora doloremque nesciunt? Fugiat et doloremque provident esse corporis amet obcaecati repudiandae sequi earum ipsum nesciunt accusamus, qui quia, porro reiciendis natus sed quae inventore minima nostrum officiis corrupti? Et excepturi deserunt quos?</p>
-            <button class="sub-btns"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg> Resume</button>
-        </div>
-        
-       
-    </div>
-
-    <div class="contact" >
-       <div class="con-tact">
-            <h3 style="color: white;">Contact</h3>
-            <h1 style="color: rgb(245, 48, 87); font-weight: lighter; font-family: sans-serif;">
-                Connect With Me
-            </h1>
-            <p style="font-weight: lighter;">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Possimus, eaque vero. Neque, earum. Dolorum voluptatibus aspernatur odit quod et a fuga voluptatem fugit quos, vitae eum cumque, <br> minima! Similique harum porro odio beatae accusamus alias sunt? Rerum eos est doloribus repudiandae nobis <br> Vel alias aut laudantium quidem <br>
-            </p>
-            <button class="sub-btn">Say Hello</button>
-       </div>
-    </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset:400,
-            duration:1000
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 
-        });
-    </script>
-</body>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto gap-4 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><span>01</span> Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>02</span> About me</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>03</span> Experience</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>04</span> Work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span>05</span> Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="" class="btn btn-primary text-decoration-none">
+                        My Resume!
+                    </a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- external js -->
+        <script src="./Assets/Bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+        <script src="./Js/Script.js"></script>
+    </body>
 </html>

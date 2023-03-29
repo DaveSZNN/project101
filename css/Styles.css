@@ -78,3 +78,66 @@ nav .navbar-brand {
 nav .navbar-brand span {
     color: #8892B0 !important;
 }
+
+/* navbar media queries (Responsive Deisng) */
+
+@media screen and (max-width: 768px) {
+    nav {
+        backdrop-filter: blur(20px);
+    }
+}
+
+
+
+/* hero section */
+
+section.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+section.hero .container h4 {
+    font-family: 'Fira Code', sans-serif;
+}
+
+.hero .container h4 a {
+    position: relative;
+    z-index: 1;
+    transition: .3s ease-in;
+}
+
+.hero .container h4 a::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    z-index: -1;
+    height: 5px;
+    /* padding: 0px 100px; */
+    transition: .3s ease-in;
+    width: 100%;
+    background-color: #64ffdb2d;
+    left: 0%;
+}
+
+
+.hero .container h4 a:hover {
+    color: #64FFDA !important;
+}
+
+.hero .container h4 a:hover::after {
+    height: 100%;
+}
+
+.hero .container h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+
+.hero .container p {
+    width: 50%;
+    font-family: 'Fira Code', sans-serif;
+}

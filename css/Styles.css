@@ -1,0 +1,143 @@
+/* this is how to import an external font from google fonts into your css */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    margin: 0%;
+    padding: 0%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Open Sans' !important;
+    height: 100vh;
+    background: #0A192F !important;
+}
+
+/* general button styling */
+
+.btn {
+    padding: 12px 25px !important;
+    border-width: 3px !important;
+    border-radius: 0% !important;
+}
+
+.btn.btn-primary {
+    background-color: #64ffdb2d !important;
+    border-style: dashed !important;
+    color: #64FFDA !important;
+    font-family: 'Fira Code', sans-serif !important;
+    border-color: #64FFDA !important;
+}
+
+/* navbar styling */
+
+body nav.navbar-dark .nav-link {
+    color: #8892B0 !important;
+    font-family: 'Fira Code', sans-serif;
+    position: relative;
+    transition: .3s ease-in;
+}
+
+body nav.navbar-dark .nav-link span {
+    color: #64FFDA;
+}
+
+body nav.navbar-dark .nav-link:hover {
+    color: #64FFDA !important;
+}
+
+body nav.navbar-dark .nav-link:hover::after {
+    width: 100%;
+}
+
+body nav.navbar-dark .nav-link.active {
+    color: #64FFDA !important;
+}
+
+body nav.navbar-dark .nav-link.active::after {
+    width: 100%;
+}
+
+body nav.navbar-dark .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    transition: .3s ease-in;
+    width: 0%;
+    border-top: 2px dashed #64FFDA;
+}
+
+nav .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #64FFDA !important;
+}
+
+nav .navbar-brand span {
+    color: #8892B0 !important;
+}
+
+/* navbar media queries (Responsive Deisng) */
+
+@media screen and (max-width: 768px) {
+    nav {
+        backdrop-filter: blur(20px);
+    }
+}
+
+
+
+/* hero section */
+
+section.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+section.hero .container h4 {
+    font-family: 'Fira Code', sans-serif;
+}
+
+.hero .container h4 a {
+    position: relative;
+    z-index: 1;
+    transition: .3s ease-in;
+}
+
+.hero .container h4 a::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    z-index: -1;
+    height: 5px;
+    /* padding: 0px 100px; */
+    transition: .3s ease-in;
+    width: 100%;
+    background-color: #64ffdb2d;
+    left: 0%;
+}
+
+
+.hero .container h4 a:hover {
+    color: #64FFDA !important;
+}
+
+.hero .container h4 a:hover::after {
+    height: 100%;
+}
+
+.hero .container h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+
+.hero .container p {
+    width: 50%;
+    font-family: 'Fira Code', sans-serif;
+}
